@@ -1,0 +1,27 @@
+import Footer from "./Components/Layout/Footer";
+import Navbar from "./Components/Layout/Navbar";
+import FifthSection from "./Components/Sections/FifthSection";
+import FirstSection from "./Components/Sections/FirstSection";
+import FourthSection from "./Components/Sections/FourthSection";
+import SecondSection from "./Components/Sections/SecondSection";
+import SeventhSection from "./Components/Sections/SeventhSection";
+import SixthSection from "./Components/Sections/SixthSection";
+import ThirdSection from "./Components/Sections/ThirdSection";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar></Navbar>
+      <div className="bg-gradient-to-br bg-orange-50">
+        <FirstSection></FirstSection>
+        <SecondSection></SecondSection>
+        <ThirdSection></ThirdSection>
+        <FourthSection></FourthSection>
+        <FifthSection></FifthSection>
+        <SixthSection></SixthSection>
+        <SeventhSection></SeventhSection>
+        <Footer></Footer>
+      </div>
+    </>
+  );
+}

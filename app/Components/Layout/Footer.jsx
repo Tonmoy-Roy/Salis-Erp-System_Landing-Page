@@ -12,6 +12,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import TermsModal from '../Sections/TermsModal';
+import PrivacyModal from '../Sections/PrivacyModal';
 
 const Footer = () => {
     return (
@@ -100,13 +101,13 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-lg font-bold text-slate-800 mb-4">Company</h3>
-
                         <ul className="space-y-2">
                             {company.map((item, index) => (
                                 <li key={index}>
-                                    {item === "Terms & Conditions" ? (
-                                        <TermsModal>{item}</TermsModal>
-                                    ) : (
+
+                                    {item === "Terms & Conditions" && <TermsModal>{item}</TermsModal>}
+                                    {item === "Privacy Policy" && <PrivacyModal>{item}</PrivacyModal>}
+                                    {item !== "Terms & Conditions" && item !== "Privacy Policy" && (
                                         <a
                                             href="#"
                                             className="text-slate-700 hover:text-orange-500 transition-colors flex items-center gap-1"
@@ -117,6 +118,7 @@ const Footer = () => {
                                             {item}
                                         </a>
                                     )}
+
                                 </li>
                             ))}
                         </ul>

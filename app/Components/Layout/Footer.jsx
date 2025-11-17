@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import phone from '../../../images/Container.png'
-import location from '../../../images/Container1.png'
-import estimate from '../../../images/Container3.png'
+import phone from '../../../images/Container.png';
+import location from '../../../images/Container1.png';
+import estimate from '../../../images/Container3.png';
 import services from '@/app/Constants/services';
 import company from '@/app/Constants/company';
 import { FaFacebook } from "react-icons/fa";
@@ -11,6 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
+import TermsModal from '../Sections/TermsModal';
 
 const Footer = () => {
     return (
@@ -99,15 +100,23 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-lg font-bold text-slate-800 mb-4">Company</h3>
+
                         <ul className="space-y-2">
                             {company.map((item, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-slate-700 hover:text-orange-500 transition-colors flex items-center gap-1">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                        {item}
-                                    </a>
+                                    {item === "Terms & Conditions" ? (
+                                        <TermsModal>{item}</TermsModal>
+                                    ) : (
+                                        <a
+                                            href="#"
+                                            className="text-slate-700 hover:text-orange-500 transition-colors flex items-center gap-1"
+                                        >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            {item}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>

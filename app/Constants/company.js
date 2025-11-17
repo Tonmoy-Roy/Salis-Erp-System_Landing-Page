@@ -5,6 +5,6 @@ const company = [
     "Our Protocol",
     "Services",
     "FAQ",
-    "Conect Us"
+    "Connect Us"
   ];
   export default company;

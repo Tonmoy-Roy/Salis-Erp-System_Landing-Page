@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function PrivacyModal({ children }) {
     const [open, setOpen] = useState(false);
-
     return (
         <>
             <button

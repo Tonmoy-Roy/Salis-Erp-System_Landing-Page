@@ -145,8 +145,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="pt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-700">
-                <div className="flex gap-6 flex-wrap justify-center items-center">
+            <div className="pt-6 md:flex justify-center items-center gap-4 text-sm text-slate-700">
+                <div className="md:flex gap-6 justify-center items-center ml-6">
                     <p>© 2025 DeshITBD.ltd</p>
 
                     <div>
@@ -155,18 +155,23 @@ const Footer = () => {
                         <a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
                     </div>
 
-                    <a href="#" className="hover:text-orange-500 transition-colors">Download Brochure: English</a>
+                    <a href="#" className="hover:text-orange-500 transition-colors">Download Brochure: English</a> <br />
                     <a href="#" className="hover:text-orange-500 transition-colors">info@deshit-bd.com</a>
                 </div>
             </div>
 
             <Image
-                src={botomicon} 
+                src={botomicon}
                 alt=""
-                className="absolute bottom-0 right-0 w-30 md:w-42 lg:w-40 pointer-events-none select-none"
+                className="absolute bottom-0 right-0 
+             w-20     /* mobile */
+             sm:w-24  /* small screens */
+             md:w-32  /* medium */
+             lg:w-40  /* large screens */
+             pointer-events-none select-none"
             />
-        </footer>
 
+        </footer>
     );
 };
 

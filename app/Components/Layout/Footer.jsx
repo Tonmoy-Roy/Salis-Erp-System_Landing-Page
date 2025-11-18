@@ -163,12 +163,7 @@ const Footer = () => {
             <Image
                 src={botomicon}
                 alt=""
-                className="absolute bottom-0 right-0 
-             w-20     /* mobile */
-             sm:w-24  /* small screens */
-             md:w-32  /* medium */
-             lg:w-40  /* large screens */
-             pointer-events-none select-none"
+                className="absolute bottom-0 right-0 w-20 sm:w-24  md:w-32 lg:w-40 pointer-events-none select-none"
             />
 
         </footer>

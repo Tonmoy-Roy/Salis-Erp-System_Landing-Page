@@ -42,12 +42,13 @@ const FirstSection = () => {
                     <div>
                         <motion.h2
                             className="text-3xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight md:w-[30vw]"
-                            initial={{ x: 300, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
+                            initial={{ x: 300, opacity: 0 }}   // start from LEFT
+                            animate={{ x: 0, opacity: 1 }}      // move to CENTER
                             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                         >
                             Streamline Your Business With SALIS ERP
                         </motion.h2>
+
 
                         <p className="md:w-[28.7vw] text-slate-600 text-lg leading-relaxed">
                             We The all-in-one ERP solution manages projects, HR, accounts, procurement and inventory seamlessly.
@@ -58,16 +59,20 @@ const FirstSection = () => {
                     </div>
                     <div>
                         <motion.div
-                            onMouseMove={handleMove}
-                            onMouseLeave={resetPosition}
-                            style={{
-                                x: smoothX,
-                                y: smoothY,
-                            }}
-                            className="inline-block"
+                            initial={{ x: -300, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                         >
-                            <Image src={image1} alt="" className="rounded-xl" />
+                            <motion.h2
+                                className="text-3xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight md:w-[30vw]"
+                                style={{ x: smoothX, y: smoothY }}
+                                onMouseMove={handleMove}
+                                onMouseLeave={resetPosition}
+                            >
+                                <Image src={image1} alt="" className="rounded-xl " />
+                            </motion.h2>
                         </motion.div>
+
                     </div>
                 </div>
             </div>

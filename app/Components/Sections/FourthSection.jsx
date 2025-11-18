@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import modules from '@/app/Constants/modules';
+import { FaArrowRightLong } from "react-icons/fa6";
+
 const FourthSection = () => {
     return (
         <div className="max-w-6xl mx-auto px-6 mb-20">
@@ -44,13 +46,22 @@ const FourthSection = () => {
 
                         {/* Read More Button */}
                         <div className="text-center">
-                            <button className="inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+                            <button className="group inline-flex items-center gap-1 font-semibold hover:text-orange-600 transition-colors relative">
                                 READ MORE
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                                <svg
+                                    className="w-4 h-4 transform transition-all duration-300 group-hover:translate-x-1 opacity-100 group-hover:opacity-0 absolute right-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
+
+                                <span className="w-5 h-4 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-2">
+                                    <FaArrowRightLong />
+                                </span>
                             </button>
                         </div>
+
                     </div>
                 ))}
             </div>

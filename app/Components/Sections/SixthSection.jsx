@@ -10,7 +10,7 @@ const SixthSection = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-        }, 4000);
+        }, 1000);
 
         return () => clearInterval(interval);
     }, []);

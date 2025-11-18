@@ -24,7 +24,7 @@ const SecondSection = () => {
 
     return (
         <div className="max-w-6xl mx-auto px-6 mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-16 fade-in">
                 Problems That Complicate Business <br />
                 Management
             </h2>

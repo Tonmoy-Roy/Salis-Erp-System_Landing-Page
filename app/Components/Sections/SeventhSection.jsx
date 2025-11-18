@@ -10,10 +10,9 @@ const SeventhSection = () => {
     };
     return (
         <div className="max-w-6xl mx-auto px-4 mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12 fade-in">
                 Frequently Asked Questions
             </h2>
-
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
                     <div
@@ -27,13 +26,18 @@ const SeventhSection = () => {
                             <span className="text-lg font-semibold text-slate-800 pr-4">
                                 {faq.question}
                             </span>
-                            <div className="flex-shrink-0">
+                            <div className="flex-shrink-0 transition-transform duration-300 transform"
+                                style={{
+                                    transform: openIndex === index ? "rotate(180deg)" : "rotate(0deg)"
+                                }}
+                            >
                                 {openIndex === index ? (
                                     <Minus className="w-6 h-6 text-slate-700" />
                                 ) : (
                                     <Plus className="w-6 h-6 text-slate-700" />
                                 )}
                             </div>
+
                         </button>
 
                         <div

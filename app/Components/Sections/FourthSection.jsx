@@ -8,7 +8,7 @@ const FourthSection = () => {
         <div className="max-w-6xl mx-auto px-6 mb-20">
             {/* Header */}
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 fade-in">
                     Comprehensive ERP Modules
                 </h2>
                 <p className="text-lg text-slate-600">
@@ -21,7 +21,7 @@ const FourthSection = () => {
                 {modules.map((module, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col text-center"
+                        className="bg-white rounded-2xl shadow-md p-8  flex flex-col text-center group"
                     >
                         {/* Icon */}
                         <div className="flex justify-center mb-6">
@@ -33,35 +33,29 @@ const FourthSection = () => {
                                 />
                             </div>
                         </div>
-
-                        {/* Title */}
-                        <h3 className="text-xl font-bold text-slate-800 mb-3 text-center">
-                            {module.title}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="text-slate-600 leading-relaxed text-center mb-6 md:w-[17.5vw] mx-auto">
-                            {module.description}
-                        </p>
-
-                        {/* Read More Button */}
+                        <div className="transition-transform duration-500 ease-out group-hover:-translate-y-[2px]">
+                            <h3 className="text-xl font-bold text-slate-800 mb-3 text-center relative inline-block mx-auto">
+                                {module.title}
+                                <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-orange-500 transition-all duration-700 group-hover:w-full rounded-full"></span>
+                            </h3>
+                            <p className="text-slate-600 leading-relaxed text-center mb-6 md:w-[17.5vw] mx-auto">
+                                {module.description}
+                            </p>
+                        </div>
                         <div className="text-center">
                             <button className="group inline-flex items-center gap-1 font-semibold hover:text-orange-600 transition-colors relative">
                                 READ MORE
-
                                 <svg
                                     className="w-4 h-4 transform transition-all duration-300 group-hover:translate-x-1 opacity-100 group-hover:opacity-0 absolute right-0"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
-
-                                <span className="w-5 h-4 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-2">
+                                <span className="w-5 h-4 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-2">
                                     <FaArrowRightLong />
                                 </span>
                             </button>
                         </div>
-
                     </div>
                 ))}
             </div>

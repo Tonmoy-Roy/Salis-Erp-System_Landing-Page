@@ -6,7 +6,7 @@ const ThirdSection = () => {
         <div className="max-w-6xl mx-auto px-6 mb-20">
             {/* Header */}
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 fade-in">
                     Why Choose SALIS Erp
                 </h2>
                 <p className="text-lg text-slate-600">
@@ -14,12 +14,11 @@ const ThirdSection = () => {
                 </p>
             </div>
 
-            {/* Features Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {features.map((feature, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white rounded-2xl shadow-md p-8 text-center group"
                     >
                         {/* Icon */}
                         <div className="flex justify-center mb-6">
@@ -34,15 +33,16 @@ const ThirdSection = () => {
                             </div>
                         </div>
 
-                        {/* Title */}
-                        <h3 className="text-xl font-bold text-slate-800 mb-3">
-                            {feature.title}
-                        </h3>
+                        <div className="transition-transform duration-500 ease-out group-hover:-translate-y-[2px]">
+                            <h3 className="text-xl font-bold text-slate-800 mb-3 text-center relative inline-block mx-auto">
+                                {feature.title}
+                                <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-orange-500 transition-all duration-700 group-hover:w-full rounded-full"></span>
+                            </h3>
 
-                        {/* Description */}
-                        <p className="text-slate-600 leading-relaxed md:w-[16vw]">
-                            {feature.description}
-                        </p>
+                            <p className="text-slate-600 leading-relaxed md:w-[16vw]">
+                                {feature.description}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>

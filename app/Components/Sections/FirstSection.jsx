@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React from 'react';
-import image1 from '../../../public/Dashboard Mockup 1.2 1.png'
+import image1 from '../../../public/Dashboard Mockup 1.2 1.png';
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const FirstSection = () => {
@@ -14,8 +14,8 @@ const FirstSection = () => {
     const handleMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
 
-        const offsetX = (e.clientX - (rect.left + rect.width / 2)) / 20;
-        const offsetY = (e.clientY - (rect.top + rect.height / 2)) / 20;
+        const offsetX = (e.clientX - (rect.left + rect.width / 2)) / 10;
+        const offsetY = (e.clientY - (rect.top + rect.height / 2)) / 10;
 
         x.set(offsetX);
         y.set(offsetY);

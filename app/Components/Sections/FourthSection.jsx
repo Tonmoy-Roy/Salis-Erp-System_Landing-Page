@@ -1,12 +1,13 @@
+"use client";
 import Image from 'next/image';
 import React from 'react';
 import modules from '@/app/Constants/modules';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const FourthSection = () => {
     return (
         <div className="max-w-6xl mx-auto px-6 mb-20">
-            {/* Header */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 fade-in">
                     Comprehensive ERP Modules
@@ -16,22 +17,28 @@ const FourthSection = () => {
                 </p>
             </div>
 
-            {/* Modules Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {modules.map((module, index) => (
                     <div
                         key={index}
                         className="bg-white rounded-2xl shadow-md p-8  flex flex-col text-center group"
                     >
-                        {/* Icon */}
                         <div className="flex justify-center mb-6">
-                            <div className="w-10 h-10 bg-gradient-to-br rounded-full flex items-center justify-center">
-                                <Image
-                                    src={module.icon}
-                                    alt=''
-                                    className=''
-                                />
-                            </div>
+                            <motion.div
+                                className="w-10 h-10 bg-gradient-to-br rounded-full flex items-center justify-center"
+                                animate={{
+                                    y: ["0%", "-10%", "0%", "10%", "0%"],      
+                                    x: ["-10%", "0%", "-10%", "0%", "-10%"], 
+                                    rotate: [0, 0, 0, 0, 0],                
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                }}
+                            >
+                                <Image src={module.icon} alt="" className="" />
+                            </motion.div>
                         </div>
                         <div className="transition-transform duration-500 ease-out group-hover:-translate-y-[2px]">
                             <h3 className="text-xl font-bold text-slate-800 mb-3 text-center relative inline-block mx-auto">

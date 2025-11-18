@@ -1,6 +1,7 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
-
+import salislogo from '../../../public/SALIS LOGO1 1.png'
 export default function TermsModal({ children }) {
     const [open, setOpen] = useState(false);
 
@@ -19,6 +20,12 @@ export default function TermsModal({ children }) {
             {open && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
                     <div className="bg-gradient-to-b from-orange-200 to-white rounded-lg shadow-lg p-4 max-w-4xl max-h-[90vh] overflow-auto relative">
+                        <Image
+                            src={salislogo}
+                            alt=""
+                            className="absolute top-2 left-2 w-16 h-auto bg-white p-2"
+                        />
+
 
                         <button
                             className="absolute top-2 right-2 text-black text-xl"

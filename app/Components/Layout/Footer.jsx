@@ -145,7 +145,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Lower footer text */}
             <div className="pt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-700">
                 <div className="flex gap-6 flex-wrap justify-center items-center">
                     <p>© 2025 DeshITBD.ltd</p>

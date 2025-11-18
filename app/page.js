@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="bg-gradient-to-br bg-orange-50">
+      <div className="bg-gradient-to-b from-orange-50 to-white">
         <FirstSection></FirstSection>
         <SecondSection></SecondSection>
         <ThirdSection></ThirdSection>

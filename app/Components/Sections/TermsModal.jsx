@@ -18,7 +18,7 @@ export default function TermsModal({ children }) {
 
             {open && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-lg shadow-lg p-4 max-w-4xl max-h-[90vh] overflow-auto relative">
+                    <div className="bg-gradient-to-b from-orange-200 to-white rounded-lg shadow-lg p-4 max-w-4xl max-h-[90vh] overflow-auto relative">
 
                         <button
                             className="absolute top-2 right-2 text-black text-xl"
@@ -34,7 +34,7 @@ export default function TermsModal({ children }) {
                             <h2 className="text-3xl font-bold">Plans (SALIS)</h2>
                         </div>
 
-                        <div className="bg-white  rounded-lg p-8 md:p-10 space-y-10">
+                        <div className="rounded-lg p-8 md:p-10 space-y-10">
                             <section>
                                 <h3 className="text-xl font-bold text-gray-800 mb-4">1. Installation & Setup</h3>
                                 <ul className="list-disc list-inside space-y-2 text-gray-700">

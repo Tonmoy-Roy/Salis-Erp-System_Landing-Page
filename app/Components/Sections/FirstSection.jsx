@@ -26,7 +26,7 @@ const FirstSection = () => {
         y.set(0);
     };
     return (
-        <div className="min-h-screen bg-gradient-to-br bg-orange-50 mb-20">
+        <div className="min-h-screen mb-20">
             <div className="max-w-7xl mx-auto px-6 py-16 text-center md:w-[60vw]">
                 <h1 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 ml-10 md:w-[47vw] fade-in">
                     Make Your Business Systematic And Easy To Manage

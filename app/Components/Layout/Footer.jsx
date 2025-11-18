@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import phone from '../../../images/Container.png';
+import botomicon from '../../../images/bottom icon.png';
 import location from '../../../images/Container1.png';
 import estimate from '../../../images/Container3.png';
 import services from '@/app/Constants/services';
@@ -16,8 +17,8 @@ import PrivacyModal from '../Sections/PrivacyModal';
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-br from-orange-200 via-yellow-100 to-orange-200 py-12">
-            <div className="max-w-7xl mx-auto  px-6">
+        <footer className="relative bg-gradient-to-b from-orange-200 to-white py-12">
+            <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-6 mb-8">
                     <div className="md:col-span-1">
                         <h3 className="text-lg font-bold text-slate-800 mb-4">
@@ -142,23 +143,31 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div className="pt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-700">
-                    <div className="flex gap-6 flex-wrap justify-center items-center">
-                        <p>© 2025 DeshITBD.ltd</p>
-                        <div>
-                            <a href="#" className="hover:text-orange-500 transition-colors mr-1">Sitemap</a>
-                            <span className='mr-1'>|</span>
-                            <a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
-                        </div>
-                        <span></span>
-                        <a href="#" className="hover:text-orange-500 transition-colors">Download Brochure: English</a>
-                        <span></span>
-                        <a href="#" className="hover:text-orange-500 transition-colors">info@deshit-bd.com</a>
+            {/* Lower footer text */}
+            <div className="pt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-700">
+                <div className="flex gap-6 flex-wrap justify-center items-center">
+                    <p>© 2025 DeshITBD.ltd</p>
+
+                    <div>
+                        <a href="#" className="hover:text-orange-500 transition-colors mr-1">Sitemap</a>
+                        <span className='mr-1'>|</span>
+                        <a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
                     </div>
+
+                    <a href="#" className="hover:text-orange-500 transition-colors">Download Brochure: English</a>
+                    <a href="#" className="hover:text-orange-500 transition-colors">info@deshit-bd.com</a>
                 </div>
             </div>
+
+            <Image
+                src={botomicon} 
+                alt=""
+                className="absolute bottom-0 right-0 w-30 md:w-42 lg:w-40 pointer-events-none select-none"
+            />
         </footer>
+
     );
 };
 

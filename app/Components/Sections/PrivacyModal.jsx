@@ -17,7 +17,7 @@ export default function PrivacyModal({ children }) {
 
             {open && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-lg shadow-lg p-4 max-w-4xl max-h-[90vh] overflow-auto relative">
+                    <div className="bg-gradient-to-b from-orange-200 to-white rounded-lg shadow-lg p-4 max-w-4xl max-h-[90vh] overflow-auto relative">
 
                         <button
                             className="absolute top-2 right-2 text-black text-xl"
@@ -32,7 +32,7 @@ export default function PrivacyModal({ children }) {
                             </h1>
                         </div>
 
-                        <div className="bg-white  rounded-lg p-8 md:p-5 space-y-10">
+                        <div className="rounded-lg p-8 md:p-5 space-y-10">
                             <section className=" text-gray-700 leading-relaxed">
                                 <p className="text-lg text-gray-600">
                                     <strong>Effective Date:</strong> 1st November 2024
